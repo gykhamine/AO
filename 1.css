@@ -1,42 +1,40 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f2f5; /* Gris clair Facebook */
-  color: #0a2540; /* Bleu foncé Facebook pour le texte principal */
+  background: url('statics/k.jpg') center center no-repeat fixed, linear-gradient(135deg, #0a2540 0%, #1877f2 100%);
+  color: #e7f3ff;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 /* NAVBAR */
 .navbar {
-  background-color: #1877f2; /* Bleu Facebook */
-  backdrop-filter: blur(10px); /* Frosted glass effect retained */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtlety */
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: rgba(24, 119, 242, 0.35); /* Bleu Facebook transparent */
+  backdrop-filter: blur(0.1px);
+  box-shadow: 0 4px 20px #1877f2a0;
+  border-bottom: 2px solid #1877f2;
 }
 
 .navbar-brand {
-  color: #ffffff !important; /* Blanc pour le logo */
+  color: #e7f3ff !important;
   font-weight: 700;
   font-size: 1.6rem;
-  text-shadow: 0 0 8px rgba(24, 119, 242, 0.4); /* Glow bleu */
+  text-shadow: 0 0 12px #1877f2, 0 0 24px #0a2540;
+  letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
 }
 
 .navbar-brand:hover {
-  color: #e7f3ff !important; /* Bleu très clair sur hover */
-  text-shadow: 0 0 12px rgba(24, 119, 242, 0.6);
-  transform: scale(1.02);
+  color: #ffffff !important;
+  text-shadow: 0 0 24px #42a5f5, 0 0 32px #1877f2;
+  transform: scale(1.05);
 }
 
 .nav-link {
-  color: #e7f3ff !important; /* Bleu très clair pour les liens */
+  color: #e7f3ff !important;
   font-weight: 500;
   margin-left: 1.8rem;
   position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav-link::after {
@@ -46,8 +44,8 @@ body {
   height: 3px;
   bottom: -8px;
   left: 0;
-  background-color: #1877f2; /* Bleu Facebook */
-  box-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
+  background: linear-gradient(90deg, #42a5f5, #1877f2);
+  box-shadow: 0 0 10px #42a5f5a0;
   transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -57,26 +55,21 @@ body {
 }
 
 .nav-link:hover {
-  color: #ffffff !important; /* Blanc sur hover */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle dark text shadow */
+  color: #42a5f5 !important;
+  text-shadow: 0 0 8px #42a5f5;
 }
 
 /* BUTTONS */
 /* General Button Style */
-.btn {
-  display: inline-block;
-  padding: 0.85rem 2rem;
-  border-radius: 50px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+.btn, .hero .btn {
+  background: linear-gradient(90deg, #1877f2 0%, #42a5f5 100%);
+  color: #fff;
+  box-shadow: 0 8px 25px #1877f2a0, 0 0 24px #42a5f5a0;
+  border-radius: 30px;
   border: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* Primary Action Button (e.g., in Hero) */
@@ -87,9 +80,9 @@ body {
 }
 
 .hero .btn:hover {
-  background: linear-gradient(45deg, #0a2540, #1877f2);
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(233, 30, 99, 0.6);
+  background: linear-gradient(90deg, #42a5f5 0%, #1877f2 100%);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 35px #42a5f5a0, 0 0 32px #1877f2a0;
 }
 
 .hero .btn::before {
@@ -113,32 +106,31 @@ body {
 
 /* Secondary Button Style (e.g., "plus" on cards) */
 .cta-btn {
-  background-color: #e7f3ff;
-  color: #1877f2;
-  border: 1px solid #1877f2;
-  padding: 0.7rem 1.4rem;
-  border-radius: 5px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Soft 3D shadow */
+  background: linear-gradient(90deg, #0a2540 0%, #1877f2 100%);
+  color: #e7f3ff;
+  border: 1px solid #42a5f5;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #1877f2a0;
+  transition: all 0.3s;
 }
 
 .cta-btn:hover {
-  background-color: #1877f2;
-  color: #ffffff;
+  background: linear-gradient(90deg, #42a5f5 0%, #1877f2 100%);
+  color: #fff;
   border-color: #0a2540;
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4); /* Stronger rose glow */
+  box-shadow: 0 6px 15px #42a5f5a0;
 }
 
 /* HEADER (Used for general page headers, if different from hero) */
 header {
-  background-color: #ffffff; /* White background for header */
+  background: rgba(24, 119, 242, 0.25);
+  backdrop-filter: blur(0.1px);
   padding: 100px 0 70px;
   text-align: center;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+  box-shadow: 0 5px 25px #1877f2a0;
   margin-bottom: 3rem;
+  border-radius: 0 0 40px 40px;
   position: relative;
   overflow: hidden;
 }
@@ -159,47 +151,50 @@ header::before { /* Degrade/texture overlay using SVG for consistent noise */
 header h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #1877f2;
+  color: #e7f3ff;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 10px rgba(24, 119, 242, 0.2); /* Subtle rose glow */
+  text-shadow: 0 0 20px #42a5f5, 0 0 40px #1877f2;
+  letter-spacing: 2px;
 }
 
 header .lead {
   font-size: 1.35rem;
-  color: #0a2540;
+  color: #e7f3ff;
   max-width: 900px;
   margin: 0.5rem auto 0;
+  text-shadow: 0 0 8px #1877f2;
 }
 
 /* HERO (Specific styling for the main landing page hero - more dramatic) */
 .hero {
-  background: linear-gradient(135deg, #1877f2 0%, #0a2540 100%);
-  color: #ffffff; /* White text on bright hero */
+  background: rgba(24, 119, 242, 0.20);
+  backdrop-filter: blur(0.1px);
+  color: #e7f3ff;
   padding: 150px 0;
   text-align: center;
-  box-shadow: inset 0 -10px 40px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.2); /* Lighter shadows */
+  box-shadow: 0 10px 30px #1877f2a0;
+  border-radius: 0 0 60px 60px;
   position: relative;
   overflow: hidden;
 }
 
-.hero::before { /* Degrade texture for hero */
+.hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>') repeat;
-  background-size: 200px;
-  opacity: 0.1; /* Less prominent on light background */
+  background: radial-gradient(circle, #42a5f5 0%, transparent 70%);
+  opacity: 0.15;
   pointer-events: none;
 }
 
 .hero h1 {
   font-size: 4.5rem;
   font-weight: 800;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6); /* Stronger white glow */
-  animation: pulseGlow 2s infinite alternate; /* Pulsing glow effect */
+  text-shadow: 0 0 30px #42a5f5, 0 0 60px #1877f2;
+  animation: pulseGlow 2s infinite alternate;
 }
 
 .hero .lead {
@@ -212,45 +207,48 @@ header .lead {
 /* Keyframe animation for pulsing glow (remains white on rose background) */
 @keyframes pulseGlow {
   from {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 30px #42a5f5, 0 0 60px #1877f2;
   }
   to {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 35px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 50px #42a5f5, 0 0 80px #1877f2;
   }
 }
 
 /* PRODUITS / SERVICES (Cards Section) */
 #produits,
 .section-content {
-  background-color: #f8f8f8; /* Consistent light background */
+  background: rgba(24, 119, 242, 0.15);
+  backdrop-filter: blur(0.1px);
   padding: 6rem 0;
+  border-radius: 40px;
 }
 
 #produits h2,
 .section-content h2 {
-  color: #333333; /* Dark grey for section titles */
+  color: #e7f3ff;
   font-weight: 700;
   margin-bottom: 3.5rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.2); 
-  justify-content: center;/* Subtle rose glow */
+  text-shadow: 0 0 16px #42a5f5, 0 0 32px #1877f2;
+  justify-content: center;
 }
 
 .product-card {
-  background-color: #ffffff; /* White for cards */
-  border: 1px solid rgba(233, 30, 99, 0.1); /* Subtle rose border */
+  background: rgba(24, 119, 242, 0.18);
+  backdrop-filter: blur(0.1px);
+  border: 1px solid #42a5f5;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 10px 30px #1877f2a0, 0 0 24px #42a5f5a0;
+  transition: transform 0.4s, box-shadow 0.4s;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .product-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(233, 30, 99, 0.1); /* Stronger hover shadow */
-  border-color: rgba(233, 30, 99, 0.3); /* More vibrant border */
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 18px 45px #42a5f5a0, 0 0 32px #1877f2a0;
+  border-color: #0a2540;
 }
 
 .product-card img {
@@ -259,12 +257,12 @@ header .lead {
   object-fit: cover;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  filter: brightness(1) grayscale(0.1); /* Slightly muted for light theme */
-  transition: filter 0.3s ease-in-out;
+  filter: brightness(1.1) grayscale(0.05) drop-shadow(0 0 12px #42a5f5);
+  transition: filter 0.3s;
 }
 
 .product-card:hover img {
-  filter: brightness(1) grayscale(0); /* Full color on hover */
+  filter: brightness(1.2) grayscale(0) drop-shadow(0 0 24px #1877f2);
 }
 
 .product-card .card-body {
@@ -276,24 +274,66 @@ header .lead {
 }
 
 .product-card .card-title {
-  color: #e91e63; /* Rose for card titles */
+  color: #e7f3ff;
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Subtle glow */
+  text-shadow: 0 0 10px #42a5f5, 0 0 20px #1877f2;
 }
 
 .product-card .card-text {
-  color: #666666; /* Muted dark grey for card text */
+  color: #e7f3ff;
   margin-bottom: 1.5rem;
   flex-grow: 1;
   font-size: 1.05rem;
 }
 
+.section-content strong {
+  color: #42a5f5;
+  text-shadow: 0 0 8px #1877f2;
+}
+
+.section-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+.section-content ul li {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.section-content ul li::before {
+  content: '→';
+  color: #42a5f5;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3em;
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px #1877f2;
+}
+
+.section-content img {
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px #1877f2a0, 0 0 24px #42a5f5a0;
+  transition: transform 0.3s;
+}
+
+.section-content img:hover {
+  transform: scale(1.03);
+}
+
 /* SECTION POURQUOI (Why Us Section) */
 #pourquoi {
-  background-color: #ffffff; /* White background */
-  color: #333333;
+  background: rgba(24, 119, 242, 0.18);
+  backdrop-filter: blur(0.1px);
+  color: #e7f3ff;
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -335,7 +375,8 @@ header .lead {
 /* SECTION CONTENU (About Us Page specific content) */
 .section-content {
   padding: 6rem 0;
-  background-color: #f8f8f8; /* Consistent with body */
+  background: rgba(24, 119, 242, 0.15);
+  backdrop-filter: blur(0.1px);
 }
 
 .section-content h2 {
@@ -384,23 +425,23 @@ header .lead {
 
 .section-content img {
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(233, 30, 99, 0.05); /* Lighter shadows */
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px #1877f2a0, 0 0 24px #42a5f5a0;
+  transition: transform 0.3s;
 }
 
 .section-content img:hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
 
 /* FOOTER */
 #contact {
-  background-color: #f0f0f0; /* Slightly darker off-white for footer */
-  color: #333333;
+  background: rgba(24, 119, 242, 0.22);
+  backdrop-filter: blur(0.1px);
+  color: #e7f3ff;
   padding: 4rem 0;
   text-align: center;
-  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15); /* Lighter shadow */
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 -5px 25px #1877f2a0;
+  border-radius: 40px 40px 0 0;
 }
 
 #contact::before { /* Degrade texture */
@@ -417,39 +458,73 @@ header .lead {
 }
 
 #contact h5.ct {
-  color: #e91e63; /* Rose for contact title */
+  color: #e7f3ff;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.8rem;
-  text-shadow: 0 0 10px rgba(233, 30, 99, 0.3); /* Footer title glow */
+  text-shadow: 0 0 20px #42a5f5, 0 0 40px #1877f2;
 }
 
 #contact p {
   font-size: 1rem;
-  color: #666666; /* Muted dark grey for footer text */
+  color: #e7f3ff;
   margin: 0.7rem 0;
 }
 
 #contact a {
-  color: #e91e63; /* Accent rose for footer links */
+  color: #42a5f5;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 #contact a:hover {
-  color: #ff4081; /* Lighter rose on hover */
+  color: #e7f3ff;
   text-decoration: underline;
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
+  text-shadow: 0 0 8px #42a5f5;
+}
+
+/* Footer Contact Info Glassmorphism Style */
+.footer-contact-info {
+  background: rgba(24, 119, 242, 0.22);
+  backdrop-filter: blur(0.1px);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #1877f2a0;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  color: #0b85ff;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
 /* General utility classes override for consistency */
 .text-center {
-  color: #333333; /* Default text in centered sections to dark grey */
+  color: #e7f3ff;
 }
 
 h2.text-primary,
 h5.text-primary {
-  color: #e91e63 !important; /* Force primary accent rose for consistency */
-  text-shadow: 0 0 5px rgba(233, 30, 99, 0.2); /* Add glow to primary text */
+  color: #e7f3ff !important;
+  text-shadow: 0 0 10px #42a5f5, 0 0 20px #1877f2;
+}
+
+.bg-light {
+  background: rgba(24, 119, 242, 0.22) !important;
+  backdrop-filter: blur(0.1px);
+  color: #e7f3ff !important;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px #1877f2a0;
+}
+
+.bg-light a {
+  color: #42a5f5 !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.bg-light a:hover {
+  color: #e7f3ff !important;
+  text-shadow: 0 0 8px #42a5f5;
 }
