@@ -1,14 +1,14 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f8f8; /* Soft off-white for main background */
-  color: #333333; /* Dark grey for main text */
+  background-color: #f0f2f5; /* Gris clair Facebook */
+  color: #0a2540; /* Bleu foncé Facebook pour le texte principal */
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 /* NAVBAR */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  background-color: #1877f2; /* Bleu Facebook */
   backdrop-filter: blur(10px); /* Frosted glass effect retained */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow for subtlety */
   padding: 1rem 0;
@@ -18,21 +18,21 @@ body {
 }
 
 .navbar-brand {
-  color: #e91e63 !important; /* Vibrant rose for brand */
+  color: #ffffff !important; /* Blanc pour le logo */
   font-weight: 700;
   font-size: 1.6rem;
-  text-shadow: 0 0 8px rgba(233, 30, 99, 0.4); /* Subtle rose glow */
+  text-shadow: 0 0 8px rgba(24, 119, 242, 0.4); /* Glow bleu */
   transition: all 0.3s ease-in-out;
 }
 
 .navbar-brand:hover {
-  color: #ff6e8a !important; /* Lighter rose on hover */
-  text-shadow: 0 0 12px rgba(255, 110, 138, 0.6);
+  color: #e7f3ff !important; /* Bleu très clair sur hover */
+  text-shadow: 0 0 12px rgba(24, 119, 242, 0.6);
   transform: scale(1.02);
 }
 
 .nav-link {
-  color: #666666 !important; /* Muted dark grey for nav links */
+  color: #e7f3ff !important; /* Bleu très clair pour les liens */
   font-weight: 500;
   margin-left: 1.8rem;
   position: relative;
@@ -46,8 +46,8 @@ body {
   height: 3px;
   bottom: -8px;
   left: 0;
-  background-color: #e91e63; /* Rose glow */
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+  background-color: #1877f2; /* Bleu Facebook */
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
   transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #333333 !important; /* Darker grey on hover */
+  color: #ffffff !important; /* Blanc sur hover */
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle dark text shadow */
 }
 
@@ -81,13 +81,13 @@ body {
 
 /* Primary Action Button (e.g., in Hero) */
 .hero .btn {
-  background: linear-gradient(45deg, #e91e63, #ff4081); /* Rose to brighter pink gradient */
+  background: linear-gradient(45deg, #1877f2, #0a2540); /* Dégradé bleu Facebook */
   color: #ffffff; /* White text on bright button */
-  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4); /* Stronger rose glow shadow */
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.2);
 }
 
 .hero .btn:hover {
-  background: linear-gradient(45deg, #ff4081, #e91e63); /* Reverse gradient on hover */
+  background: linear-gradient(45deg, #0a2540, #1877f2);
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 12px 35px rgba(233, 30, 99, 0.6);
 }
@@ -113,23 +113,23 @@ body {
 
 /* Secondary Button Style (e.g., "plus" on cards) */
 .cta-btn {
-  background-color: rgba(0, 0, 0, 0.05); /* Slightly transparent dark for contrast */
-  color: #e91e63; /* Rose text */
+  background-color: #e7f3ff;
+  color: #1877f2;
+  border: 1px solid #1877f2;
   padding: 0.7rem 1.4rem;
   border-radius: 5px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Soft 3D shadow */
-  border: 1px solid rgba(233, 30, 99, 0.2); /* Subtle rose border */
 }
 
 .cta-btn:hover {
-  background-color: #e91e63; /* Solid rose on hover */
-  color: #ffffff; /* White text on hover */
+  background-color: #1877f2;
+  color: #ffffff;
+  border-color: #0a2540;
   transform: translateY(-2px) scale(1.01);
   box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4); /* Stronger rose glow */
-  border-color: #ff4081;
 }
 
 /* HEADER (Used for general page headers, if different from hero) */
@@ -159,21 +159,21 @@ header::before { /* Degrade/texture overlay using SVG for consistent noise */
 header h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #333333; /* Dark grey for heading */
+  color: #1877f2;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 10px rgba(233, 30, 99, 0.2); /* Subtle rose glow */
+  text-shadow: 0 0 10px rgba(24, 119, 242, 0.2); /* Subtle rose glow */
 }
 
 header .lead {
   font-size: 1.35rem;
-  color: #666666; /* Muted dark grey */
+  color: #0a2540;
   max-width: 900px;
   margin: 0.5rem auto 0;
 }
 
 /* HERO (Specific styling for the main landing page hero - more dramatic) */
 .hero {
-  background: linear-gradient(135deg, #e91e63 0%, #ff4081 100%); /* Rose to brighter pink gradient */
+  background: linear-gradient(135deg, #1877f2 0%, #0a2540 100%);
   color: #ffffff; /* White text on bright hero */
   padding: 150px 0;
   text-align: center;
